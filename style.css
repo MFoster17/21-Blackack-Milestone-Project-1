@@ -4,14 +4,14 @@ body {
 }
 
 #dealer-cards, img {
-  height: 175px;
-  width: 125px;
+  height: 150px;
+  width: 115px;
   margin: 1px;
 }
 
 #player1-cards, img {
-  height: 175px;
-  width: 125px;
+  height: 150px;
+  width: 115px;
   margin: 1px;
 }
 
