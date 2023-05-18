@@ -40,6 +40,7 @@ body:not(#Jack, #Black) {
   color: white;
   text-align: center;
   background-image: url("./SL_120319_25700_14.jpg");
+  background-size: 100%;
 }
 
 
