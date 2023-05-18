@@ -43,13 +43,18 @@ body:not(#Jack, #Black) {
   background-size: 100%;
 }
 
-
+#results {
+  top: 20px;
+  font-size: 25px;
+  
+}
 
 .footer { 
   grid-area: footer;
-  padding-top: 2.5%;
+  padding-top: 1.3%;
   padding-bottom: 2.5%;
   right: 41%;
+  color: white;
 }
 
 /* styling for buttons */
