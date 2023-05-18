@@ -87,7 +87,7 @@ function hit() {
     yourAceCount += checkAce(card);
     document.getElementById("player1-cards").append(cardImg);
 
-    if (reduceAce(player1Sum, yourAceCount) > 21) { //A, J, 8 -> 1 + 10 + 8
+    if (reduceAce(player1Sum, yourAceCount) > 21) { 
         canHit = false;
     }
 
@@ -124,6 +124,8 @@ function stay() {
     document.getElementById("results").innerText = message;
 }
 
+ 
+// Function to collect card value and check for ace
 function getValue(card) {
     let data = card.split("-");
     let value = data[0];
@@ -136,7 +138,7 @@ function getValue(card) {
     }
     return parseInt(value);
 }
-
+// check for ace function from ChatGPT
 function checkAce(card) {
     if (card[0] == "A") {
         return 1;
@@ -144,10 +146,69 @@ function checkAce(card) {
     return 0;
 }
 
-function reduceAce(playerSum, playerAceCount) {
-    while (playerSum > 21 && playerAceCount > 0) {
-        playerSum -= 10;
-        playerAceCount -= 1;
+function reduceAce(player1Sum, youAceCount) {
+    while (player1Sum > 21 && yourAceCount > 0) {
+        player1Sum -= 10;
+        yourAceCount -= 1;
     }
-    return playerSum;
+    return player1Sum;
 }
+
+function reduceAceDealer(dealerSum, dealerAceCount) {
+    while (dealerSum > 21 && dealerAceCount > 0) {
+        dealerSum -= 10;
+        dealerAceCount -= 1;
+    }
+    return dealerSum;
+}
+
+// Function for dealer to finish turn 
+function dealerTurn() {
+    while (dealerSum < 17) {
+        let cardImg = document.createElement("img");
+        let card = deck.pop();
+        cardImg.src = "./cards/" + card + ".png";
+        dealerSum += getValue(cards);
+        dealerAceCount += checkAce(card);
+        document.getElementById("dealer-cards").append(cardImg);
+    }
+    stay();
+}
+
+// Function to check if dealer or player can hit
+function hit() {
+    if (!canHit) {
+        return;
+    }
+
+    let cardImg = document.createElement("img");
+    let card = deck.pop();
+    cardImg.src = "./cards/" + card + ".png";
+    player1Sum += getValue(card);
+    yourAceCount += checkAce(card);
+    document.getElementById("player1-cards").append(cardImg);
+
+    if (reduceAce(player1Sum, yourAceCount) > 21) {
+        canHit = false;
+        dealerTurn();
+    }
+}
+
+function showScore(activePlayer){
+    if(activePlayer['score']>21){
+        document.querySelector(activePlayer['scoreSpan']).textContent = 'BUST!';
+        document.querySelector(activePlayer['scoreSpan']).style.color = 'yellow';
+    }
+    else{
+        document.querySelector(activePlayer['scoreSpan']).textContent = activePlayer['score'];
+    }
+}
+
+
+
+You['score'] = 0;
+document.querySelector(You['scoreSpan']).textContent = You['score'];
+document.querySelector(You['scoreSpan']).style.color = 'whiteSmoke';
+Dealer['score'] = 0;
+document.querySelector(Dealer['scoreSpan']).textContent = Dealer['score'];
+document.querySelector(Dealer['scoreSpan']).style.color = 'whiteSmoke';

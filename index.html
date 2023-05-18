@@ -9,20 +9,53 @@
 </head>
 
 <body>
-	<h2>Dealer: <span id="dealer-sum"></span></h2>
+	<div id="background-img"></div>
+	<!-- Section for Layout -->
+<section class="layout">
+	
+	<h2>
+	  <span id="Black">Black</span>
+	  <span id="Jack">Jack</span>
+	</h2>
+	<!-- Div for dealers cards -->
+  <div class="main">
+    <h2>Dealer: <span id="dealer-sum"></span></h2>
 	<div id="dealer-cards"></div>
-		<img id="hidden" src="./cards/BACK.png">
-
-
-		<br>
-		
-
+	<img id="hidden" src="./cards/BACK.png">
+<!-- Div for players cards -->
 	<h2>Player 1: <span id="player1-sum"></span></h2>
 	<div id="player1-cards"></div>
-
+  </div>
+</section>
 	<br>
+<div class="footer">
+	<!-- Hit Button -->
 	<button id="hit">Hit</button>
+	<!-- Stay Button -->
 	<button id="stay">Stay</button>
+	<!-- Restart Button -->
+	<button id="restart" type="button" onClick="window.location.reload()">Restart</button>
+</div>
+<!-- P tag for the results of the game to show -->
 	<p id="results"></p>
+
+	<div class="row3">
+		<h3>Scoreboard: </h3>
+		<table>
+			<tr>
+				<th>Wins</th>
+				<th>Losses</th>
+				<th>Draws</th>
+			</tr>
+			<tr>
+				<td><span id="wins">0</span></td>
+				<td><span id="losses">0</span></td>
+				<td><span id="draws">0</span></td>
+			</tr>
+		</table>
+	</div>
+
+
 </body>
+
 </html>

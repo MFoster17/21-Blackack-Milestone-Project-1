@@ -45,6 +45,7 @@ The web game is deployed at <YOUR DEPLOYED GITHUB.IO URL GOES HERE>.
 
 _(Replace this text with a brief description of your game and what inspired you to make it.)_
 
+I chose to make Blackjack the casino game because I recently turned 21 and figured it was fitting. 
 
 ## Game Logic
 
@@ -75,6 +76,9 @@ XXX IMPORTANT! Replace the text below as you list the MVP criteria you met AND T
 - Another thing.
 - Etc.
 
+- The game must function as a normal black jack game with a hit function and a stand function and be able to tell you who won
+- The game must add the scores of the cards properly
+- the 
 
 ### Post-MVP Plans
 
@@ -83,6 +87,22 @@ XXX IMPORTANT! Replace the text below as you list what you would do to improve t
 - One great idea I hope to be able to add in before the project deadline.
 - Another that will be a stretch.
 - Something else I don't technically know how to do... *yet*. :)
+
+I want the player to be able to split their hand 
+I want to add betting 
+I want to add sound effects to my game
+
+
+## Contributors
+- My friend michael murphy helped me with some game logic 
+- www.freepik.com for all images other than cards
+-
+- ChatGPT 
+- I used the card images from this git hub repo
+https://github.com/ImKennyYip/black-jack
+
+
+
 
 
 XXX IMPORTANT! USE THIS SPACE FOR THE SCHEDULE WE END UP MAKING IN CLASS AND ADD ANY PERSONAL INFO AS NEEDED. THE README IS NOT JUST A PLACE TO TELL OTHERS ABOUT THE CODE IN YOUR APP, BUT ALSO IT CAN BE A PART OF THE WAY YOU PLAN AND KEEP TRACK OF YOUR PROGRESS MAKING YOUR APP. BUT MAKE SURE TO DELETE ALL OF TEXT BELOW THIS LINE BEFORE YOU SUBMIT THE PROJECT FINALLY XXX
